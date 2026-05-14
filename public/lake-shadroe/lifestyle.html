@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!-- IMPORTANT: Never add LS-NNN reference numbers, filenames, or internal image library data as visible overlays, captions, or labels on any image in this file. These are internal reference tools only. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Shadroe · The Resort Experience</title>
+<meta name="description" content="Lake Shadroe Resort &amp; Marina — a private lakefront community with direct Gulf access. Forty-eight residences, a twelve-slip marina, a waterfront restaurant, and a destination spa. Cape Coral, Florida." />
+<meta name="robots" content="noindex" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:      #0D2B4E;
+  --navy-mid:  #1A3D66;
+  --gold:      #C89A3A;
+  --gold-light:#E2B95A;
+  --gold-dim:  rgba(200,154,58,0.15);
+  --cream:     #F9F7F3;
+  --parchment: #F2EDE3;
+  --rule:      rgba(13,43,78,0.15);
+  --rule-light:rgba(13,43,78,0.08);
+  --muted:     #5A6478;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:#F9F7F3; font-family:'Jost',sans-serif; -webkit-font-smoothing:antialiased; color:var(--navy); }
+img { display:block; max-width:100%; }
+@page { size: A4; margin: 0.5in; }
+
+.doc {
+  max-width: 8.5in;
+  margin: 32px auto;
+  background: var(--cream);
+  box-shadow: 0 1px 30px rgba(13,43,78,0.10);
+  overflow: hidden;
+}
+
+/* ── Brandmark ──────────────────────────────────────── */
+.brandmark { display:flex; flex-direction:column; gap:1px; }
+.brandmark .name { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.18em; font-weight:400; line-height:1.15; }
+.brandmark .rule-row { display:flex; gap:5px; align-items:center; margin-top:1px; }
+.brandmark .rule { width:16px; height:1px; background:var(--gold); }
+.brandmark .inv { font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:0.22em; color:var(--gold); }
+
+/* ── Top framing strip ──────────────────────────────── */
+.framing {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 16px 0.7in;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(200,154,58,0.4);
+}
+.framing-text-en {
+  font-family:'Cormorant Garamond',serif; font-size:13px;
+  font-style: italic; color: rgba(249,247,243,0.92);
+  letter-spacing: 0.01em;
+}
+.framing-text-es {
+  font-family:'Cormorant Garamond',serif; font-size:11px;
+  font-style: italic; color: rgba(249,247,243,0.55);
+  margin-top: 2px; letter-spacing: 0.01em;
+}
+.framing-brand .name { color: var(--cream); }
+
+/* ── Section chrome ─────────────────────────────────── */
+.section { padding: 0.7in 0.85in; }
+.section.dark { background: var(--navy); color: var(--cream); }
+.section + .section { border-top: 1px solid var(--rule-light); }
+.section.dark + .section.dark, .section.dark + .section { border-top: 0; }
+
+.eyebrow {
+  font-family:'DM Mono',monospace; font-size:10px;
+  letter-spacing:0.20em; text-transform:uppercase;
+  color: var(--gold); margin-bottom: 10px;
+}
+.title {
+  font-family:'Cormorant Garamond',serif;
+  font-size: 34px; font-weight: 400;
+  color: var(--navy); line-height: 1.1;
+  margin-bottom: 14px; letter-spacing: -0.01em;
+}
+.title em { font-style: italic; color: var(--gold); }
+.section.dark .title { color: var(--cream); }
+
+.body-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size: 15px; line-height: 1.65; color: var(--navy);
+  max-width: 5.8in;
+}
+.section.dark .body-en { color: rgba(249,247,243,0.92); }
+.body-en + .body-en { margin-top: 12px; }
+.body-en strong { font-weight: 600; }
+
+.body-es {
+  font-family:'Cormorant Garamond',serif;
+  font-size: 12.5px; line-height: 1.6;
+  color: var(--muted); font-style: italic;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+  margin-top: 18px;
+  max-width: 5.8in;
+}
+.section.dark .body-es { color: rgba(249,247,243,0.55); border-top-color: rgba(200,154,58,0.25); }
+
+/* ── Full-bleed image (real or placeholder) ─────────── */
+.fullbleed {
+  width: 100%; aspect-ratio: 16/9;
+  overflow: hidden; position: relative;
+  background: var(--parchment);
+}
+.fullbleed img { width:100%; height:100%; object-fit:cover; }
+
+/* placeholder slot — shows where a not-yet-landed file will sit */
+.placeholder {
+  border: 2px dashed rgba(200,154,58,0.55);
+  background:
+    repeating-linear-gradient(45deg,
+      rgba(200,154,58,0.05) 0 12px,
+      rgba(200,154,58,0.02) 12px 24px);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 24px; text-align: center; gap: 6px;
+}
+.placeholder-id {
+  font-family:'Cinzel',serif; font-size: 14px;
+  letter-spacing: 0.18em; color: var(--gold); font-weight: 500;
+}
+.placeholder-name {
+  font-family:'Cormorant Garamond',serif; font-size: 16px;
+  font-style: italic; color: var(--navy); margin-top: 2px;
+}
+.placeholder-path {
+  font-family:'DM Mono',monospace; font-size: 9px;
+  color: var(--muted); letter-spacing: 0.04em;
+  margin-top: 6px;
+}
+
+/* ── Hero header (cover-style) ──────────────────────── */
+.hero {
+  height: 6.2in; position: relative; overflow: hidden;
+  background: var(--navy);
+}
+.hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-overlay { position:absolute; inset:0; background: linear-gradient(to bottom, rgba(13,43,78,0.30) 0%, rgba(13,43,78,0.20) 45%, rgba(13,43,78,0.78) 100%); }
+.hero-inner { position:relative; z-index:1; height:100%; padding: 0.7in 0.85in; display:flex; flex-direction:column; color: var(--cream); }
+.hero-top { display:flex; justify-content:space-between; align-items:flex-start; }
+.hero-top .brandmark .name { color: var(--cream); }
+.hero-spacer { flex:1; }
+.hero-eyebrow { font-family:'Cinzel',serif; font-size:13px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:#C89A3A; text-shadow: 0 1px 4px rgba(0,0,0,0.6); margin-bottom: 14px; }
+.hero-title { font-family:'Cormorant Garamond',serif; font-size:54px; font-weight:300; line-height:1.05; color: var(--cream); max-width: 6in; }
+.hero-title em { font-style: italic; color: var(--gold-light); font-weight: 400; }
+.hero-sub { font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; color: rgba(249,247,243,0.85); max-width: 5.5in; margin-top: 14px; }
+
+/* ── SW Florida image stack ─────────────────────────── */
+/* Stacks two full-bleed images vertically with a clear break between them.
+   Each image renders at its natural aspect ratio (no cropping) — the prior
+   3.4in fixed-row grid + object-fit:cover was clipping the bottom off the
+   building/marina rendering. Scoped overrides so the rest of the page's
+   intentional .fullbleed crops (hero, img-cards, headshots) are untouched. */
+.swfl-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 40px;
+}
+.swfl-stack .fullbleed {
+  aspect-ratio: auto;
+  height: auto;
+  overflow: visible;
+}
+.swfl-stack .fullbleed img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 5.5in;
+}
+@media print {
+  .swfl-stack { gap: 0.5in; }
+  .swfl-stack .fullbleed img { max-height: 4in; }
+}
+
+/* ── Image grid (campus / amenities) ────────────────── */
+.img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.img-card {
+  background: #fff; border: 1px solid var(--rule); overflow: hidden;
+}
+.img-card .img-wrap { aspect-ratio: 16/9; overflow: hidden; }
+.img-card img { width:100%; height:100%; object-fit:cover; }
+.img-card .img-meta { padding: 12px 14px 14px; }
+.img-card .img-tag { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom: 4px; }
+.img-card .img-head { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight: 500; color: var(--navy); line-height:1.2; margin-bottom: 4px; }
+.img-card .img-desc { font-family:'Cormorant Garamond',serif; font-size:12.5px; line-height:1.5; color: var(--navy); }
+.img-card .img-desc-es { font-family:'Cormorant Garamond',serif; font-size:11px; line-height:1.45; color: var(--muted); font-style: italic; margin-top: 4px; }
+
+/* ── Spa stack (3 images vertical inside dark) ──────── */
+.spa-stack { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 18px; }
+.spa-stack .img-card { background: rgba(255,255,255,0.04); border-color: rgba(200,154,58,0.18); }
+.spa-stack .img-tag { color: var(--gold-light); }
+.spa-stack .img-head { color: var(--cream); }
+.spa-stack .img-desc { color: rgba(249,247,243,0.85); }
+.spa-stack .img-desc-es { color: rgba(249,247,243,0.55); }
+
+/* ── Moats brief callouts ───────────────────────────── */
+.moats-brief {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-top: 14px;
+}
+.moat-mini {
+  background: #fff; border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 14px 16px;
+}
+.moat-mini .moat-tag {
+  font-family:'DM Mono',monospace; font-size:9px;
+  letter-spacing:0.18em; text-transform:uppercase;
+  color: var(--gold); margin-bottom: 4px;
+}
+.moat-mini .moat-head {
+  font-family:'Cormorant Garamond',serif; font-size:16px;
+  font-weight: 600; color: var(--navy); line-height: 1.2;
+  margin-bottom: 5px;
+}
+.moat-mini .moat-en {
+  font-family:'Cormorant Garamond',serif; font-size:12px;
+  line-height:1.5; color: var(--navy);
+}
+.moat-mini .moat-es {
+  font-family:'Cormorant Garamond',serif; font-size:10.5px;
+  line-height:1.45; color: var(--muted);
+  margin-top: 4px; font-style: italic;
+}
+
+/* ── Pull quote (the resort experience opener) ──────── */
+.pullquote {
+  font-family:'Cormorant Garamond',serif;
+  font-size: 22px; font-weight: 300; font-style: italic;
+  color: var(--navy); line-height: 1.4;
+  max-width: 6.2in; margin: 24px 0 6px;
+}
+.pullquote em { color: var(--gold); font-style: italic; }
+
+/* ── Closing / contact ─────────────────────────────── */
+.closing-grid {
+  display: grid; grid-template-columns: 1.4in 1fr;
+  gap: 22px; align-items: start; margin-top: 22px;
+}
+.headshot-slot { aspect-ratio: 4/5; overflow: hidden; }
+.headshot-slot.placeholder {
+  padding: 16px; min-height: 1.8in;
+}
+.headshot-slot img { width:100%; height:100%; object-fit: cover; }
+.headshot-feature {
+  border-radius: 8px;
+  border: 2px solid rgba(200,154,58,0.45);
+  box-shadow: 0 2px 14px rgba(13,43,78,0.18);
+}
+.headshot-feature img { border-radius: 6px; }
+.closing-text-en {
+  font-family:'Cormorant Garamond',serif; font-size: 14.5px;
+  line-height: 1.65; color: var(--navy);
+}
+.closing-text-es {
+  font-family:'Cormorant Garamond',serif; font-size: 12px;
+  line-height: 1.55; color: var(--muted);
+  margin-top: 10px; font-style: italic;
+}
+
+.contact-block {
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr auto; gap: 18px;
+  align-items: end;
+}
+.contact-name {
+  font-family:'Cinzel',serif; font-size: 13px;
+  letter-spacing: 0.10em; color: var(--navy);
+  text-transform: uppercase; font-weight: 500;
+}
+.contact-role {
+  font-family:'Cormorant Garamond',serif; font-size: 12.5px;
+  font-style: italic; color: var(--muted); margin-top: 2px;
+}
+.contact-lines {
+  font-family:'DM Mono',monospace; font-size: 10px;
+  color: var(--muted); line-height: 1.75; text-align: right;
+  letter-spacing: 0.02em;
+}
+.contact-lines a { color: var(--navy); text-decoration: none; border-bottom: 1px dotted var(--rule); }
+
+/* ── Intro CTA (private call invitation) ────────────── */
+.intro-cta { margin: 8px 0 22px; }
+.intro-cta-lead-en {
+  font-family:'Cormorant Garamond',serif; font-size: 16px;
+  font-style: italic; color: rgba(249,247,243,0.92);
+  line-height: 1.55; margin-bottom: 14px; max-width: 6.2in;
+}
+.intro-cta-lead-es {
+  font-family:'Cormorant Garamond',serif; font-size: 13px;
+  font-style: italic; color: rgba(249,247,243,0.55);
+  line-height: 1.5; margin-top: 8px; padding-top: 8px;
+  border-top: 1px dashed rgba(200,154,58,0.20); max-width: 6.2in;
+}
+.intro-cta-btn {
+  display: inline-block;
+  border: 1px solid #C89A3A;
+  color: #C89A3A;
+  padding: 12px 28px;
+  background: transparent;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  margin: 6px 0 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.intro-cta-btn:hover, .intro-cta-btn:focus {
+  background: #C89A3A;
+  color: #0D2B4E;
+}
+.intro-cta-sub {
+  font-family: 'Jost', sans-serif; font-size: 11px;
+  color: rgba(249,247,243,0.65); letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+/* ── VPI contact pack (Rob + Deborah top, Koen sub) ─── */
+.vpi-contact-block { margin-top: 22px; }
+.vpi-contact-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+  padding-top: 18px; border-top: 1px solid rgba(200,154,58,0.30);
+}
+.vpi-contact-card {
+  display: grid; grid-template-columns: 90px 1fr; gap: 14px;
+  align-items: start;
+}
+.vpi-contact-headshot {
+  width: 90px; height: 90px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 1.5px solid rgba(200,154,58,0.45);
+}
+.vpi-contact-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 500; color: var(--cream);
+  line-height: 1.2; margin-bottom: 2px;
+}
+.vpi-contact-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12.5px; font-style: italic;
+  color: rgba(249,247,243,0.75); margin-bottom: 8px;
+}
+.vpi-contact-lines {
+  font-family: 'DM Mono', monospace; font-size: 10.5px;
+  color: rgba(249,247,243,0.85); line-height: 1.75;
+  letter-spacing: 0.02em;
+}
+.vpi-contact-lines a {
+  color: var(--gold-light); text-decoration: none;
+  border-bottom: 1px dotted rgba(200,154,58,0.4);
+}
+.vpi-contact-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11.5px; font-style: italic;
+  color: rgba(249,247,243,0.6);
+  margin-top: 8px; line-height: 1.45;
+}
+.vpi-contact-sub {
+  display: grid; grid-template-columns: 70px 1fr; gap: 14px;
+  align-items: center; margin-top: 22px;
+  padding-top: 16px; border-top: 1px dashed rgba(200,154,58,0.22);
+}
+.vpi-contact-headshot-sm {
+  width: 70px; height: 70px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 1.5px solid rgba(200,154,58,0.35);
+}
+.vpi-contact-sublabel {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 3px;
+}
+.vpi-contact-subname {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14.5px; font-weight: 500; color: var(--cream);
+  margin-bottom: 4px;
+}
+.vpi-contact-sublines {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  color: rgba(249,247,243,0.75); letter-spacing: 0.02em;
+}
+.vpi-contact-sublines a {
+  color: var(--gold-light); text-decoration: none;
+  border-bottom: 1px dotted rgba(200,154,58,0.35);
+}
+@media (max-width: 620px) {
+  .vpi-contact-row { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+.footer {
+  background: var(--cream);
+  padding: 18px 0.85in 22px;
+  border-top: 1px solid var(--rule);
+  font-family:'DM Mono',monospace; font-size: 8.5px;
+  letter-spacing: 0.03em; color: var(--muted);
+  line-height: 1.6; text-align: center;
+}
+.footer .gold { color: var(--gold); }
+.footer .strong { color: var(--navy); font-weight: 500; }
+
+@media print {
+  /* ═══ Print restructure for A4 — full multi-column to single-column ═══
+     The web layout uses 2-3 column grids in many places (img-grid,
+     spa-stack, moats-brief, vpi-contact-row, etc.). Those columns are
+     what cause the mid-page splits we saw on the printed PDF: a card
+     sitting at half-width with another card next to it is still half
+     a page tall and tends to cross a break. The fix is to stack every
+     multi-column container so each card becomes a full-width row that
+     page-break-inside: avoid can actually keep intact.
+
+     Every class from the lifestyle file's class inventory has been
+     reviewed — see the comment list under each rule. */
+
+  @page { size: A4; margin: 0.6in; }
+  html, body { background: white; margin: 0; padding: 0; }
+  .doc { margin: 0; box-shadow: none; max-width: 100%; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  .print-btn { display: none !important; }
+
+  /* Force every multi-column / flex container to stack vertically.
+     Classes: framing (flex), hero-top (flex), img-grid (2-col grid),
+     spa-stack (3-col grid), moats-brief (2-col grid), closing-grid
+     (grid), vpi-contact-row (2-col grid), vpi-contact-sub (2-col grid
+     for headshot+text), vpi-contact-card (2-col grid). */
+  .framing,
+  .hero-top,
+  .img-grid,
+  .spa-stack,
+  .moats-brief,
+  .closing-grid,
+  .vpi-contact-row,
+  .vpi-contact-sub,
+  .vpi-contact-card {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* Hero shrinks for print (web hero is 6.2in — too tall after a 0.6in
+     margin is consumed; 4in leaves room for the eyebrow + title below). */
+  .hero { height: 4in !important; max-height: 4in !important; }
+
+  /* Full-bleed images become contained at print height (was object-fit:
+     cover at 100% height — clipped or overflowed on A4). */
+  .fullbleed,
+  .swfl-stack .fullbleed {
+    height: auto !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+  }
+  .fullbleed img,
+  .swfl-stack .fullbleed img {
+    max-height: 4in !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Images: max-width 100%, never split. */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Never split any cohesive content block.
+     Classes: section, section.dark, swfl-stack, fullbleed, img-card,
+     moat-mini, moats-brief, vpi-contact-card, vpi-contact-sub,
+     vpi-contact-block, intro-cta, pullquote, framing — plus every
+     heading + branded-label so they stay intact. */
+  .section,
+  .section.dark,
+  .swfl-stack,
+  .fullbleed,
+  .img-card,
+  .moat-mini,
+  .moats-brief,
+  .vpi-contact-card,
+  .vpi-contact-sub,
+  .vpi-contact-block,
+  .intro-cta,
+  .pullquote,
+  .framing,
+  h1, h2, h3, h4,
+  .title, .hero-title, .moat-head, .img-head {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Keep headings glued to the paragraph that follows. */
+  h1, h2, h3, h4,
+  .title, .eyebrow, .hero-eyebrow,
+  .moat-tag, .moat-head,
+  .img-tag, .img-head,
+  .vpi-contact-name, .vpi-contact-sublabel {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Each major section starts on a fresh page (swfl-stack + every
+     .section is a major divider in this file). */
+  .swfl-stack,
+  .section {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  /* Hero stays alone on the cover page. */
+  .hero {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+}
+
+/* ── ?agent= dynamic agent-branded override ───────── */
+.agent-override .vpi-contact-row { grid-template-columns: 1fr; }
+.agent-override .vpi-contact-card { grid-template-columns: 90px 1fr; }
+
+/* ── Print button (fixed) ──────────────────────────── */
+.print-btn {
+  position: fixed; bottom: 18px; right: 18px; z-index: 999;
+  background: var(--gold); color: var(--navy);
+  border: none; padding: 10px 16px;
+  font-family: 'DM Mono', monospace; font-size: 10.5px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 3px; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+.print-btn:hover { background: var(--gold-light, var(--gold)); }
+@media print { .print-btn { display: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <!-- ── Framing strip ────────────────────────────────── -->
+  <div class="framing">
+    <div class="framing-brand brandmark">
+      <span class="name">VANTAGE POINT</span>
+      <span class="rule-row">
+        <span class="rule"></span>
+        <span class="inv">INVESTMENTS</span>
+        <span class="rule"></span>
+      </span>
+    </div>
+    <div>
+      <div class="framing-text-en">A private introduction to Lake Shadroe Resort &amp; Marina — prepared for a family of discerning taste.</div>
+      <div class="framing-text-es">Una introducción privada a Lake Shadroe Resort &amp; Marina — preparada para una familia de gusto exquisito.</div>
+    </div>
+  </div>
+
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <header class="hero">
+    <img src="https://lake-shadroe-owners.vercel.app/images/hero-pool-deck-sunset.jpg" alt="Lake Shadroe pool deck at sunset" />
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div style="text-align:right; font-family:'Cinzel',serif; font-size:15px; font-weight:600; letter-spacing:0.05em; color:#ffffff; line-height:1.7; position:absolute; top:24px; right:32px; background:rgba(13,43,78,0.72); padding:14px 20px; border-radius:4px; border-left:2px solid #C89A3A; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);">
+          CAPE CORAL · FLORIDA<br/>
+          MATLACHA PASS · GULF ACCESS<br/>
+          <span style="color:var(--gold); font-weight:700; font-size:17px;">FROM $1,040,625</span>
+        </div>
+      </div>
+      <div class="hero-spacer"></div>
+      <div class="hero-eyebrow">Lake Shadroe Resort &amp; Marina</div>
+      <h1 class="hero-title">The resort <em>experience</em>.</h1>
+      <p class="hero-sub">A private lakefront community with direct Gulf access — forty-eight residences set along the water, a twelve-slip marina, a waterfront restaurant, a boutique destination spa, and a resort campus built for the life that Southwest Florida does better than anywhere else.</p>
+    </div>
+  </header>
+
+  <!-- ── SW Florida (new section, full-bleed lead) ──── -->
+  <section class="swfl-stack" style="background: var(--cream);">
+    <div class="fullbleed">
+      <img src="https://lakeshadroe.com/images/hero-home.jpg" alt="Lake Shadroe Resort &amp; Marina — building from the water, marina with boats, pool deck and sand-entry beach in foreground" />
+    </div>
+    <div class="fullbleed">
+      <img src="https://lakeshadroe.com/images/residence-interior.jpg" alt="Lake Shadroe residence interior — sample unit rendering" />
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: calc(0.7in + 3rem);">
+    <div class="eyebrow">Southwest Florida</div>
+    <h2 class="title">More waterfront than Miami, <em>still undiscovered</em>.</h2>
+    <p class="body-en">Four hundred miles of navigable canals. White sand barrier islands minutes by boat. The Gulf of Mexico at your doorstep. Cape Coral sits inside the Gulf Coast triangle that Latin American and European families have chosen for three generations — discreet, low-traffic, within an hour of Naples and a short flight from Miami.</p>
+    <p class="body-en">The corridor has never carried the noise of Miami or the volume of Naples. That is the point. The families already here are the ones who chose privacy over visibility.</p>
+
+    <p class="body-es"><strong>Más frente al mar que Miami, más natural que Nápoles, todavía por descubrir.</strong> Cuatrocientas millas de canales navegables. Islas barrera de arena blanca a minutos en embarcación. El Golfo de México al pie de la residencia.</p>
+    <p class="body-es">El corredor nunca ha tenido el bullicio de Miami ni la densidad de Nápoles. Ese es precisamente el punto. Las familias que ya están aquí eligieron privacidad antes que visibilidad.</p>
+  </section>
+
+  <!-- ── The campus / property ────────────────────────── -->
+  <section class="section">
+    <div class="eyebrow">The property · La propiedad</div>
+    <h2 class="title">Forty-eight residences on Lake Shadroe, with the Gulf <em>just minutes away by boat</em>.</h2>
+
+    <p class="pullquote">"Every component was positioned so the water is visible from every vantage point — resident balcony, pool chaise, restaurant table, or marina slip."</p>
+
+    <p class="body-en"><strong>The Complete Waterfront Campus.</strong> The marina slips wrap the waterfront curve. The pool and beach zone sit directly adjacent. The Table flanks the pool with indoor dining and an outdoor terrace. The kayak launch meets the water's edge. The resort tower rises behind it all, with Lake Shadroe opening west toward the marina and the Gulf beyond. The Dalal is a marble steam bath spa designed for cleansing, relaxation, and socializing.</p>
+
+    <div class="img-grid" style="margin-top: 24px;">
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-02.jpeg" alt="Full resort aerial" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">The campus</div>
+          <div class="img-head">Pool deck. Marina. Restaurant. Spa.</div>
+          <div class="img-desc">One waterfront, four anchor amenities, every component positioned so the water is in view.</div>
+          <div class="img-desc-es">Un solo frente al agua, cuatro amenidades principales, cada elemento dispuesto para que el agua sea siempre visible.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-04.jpeg" alt="Gazebo and hot tub at sunset" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">The pool deck after dark</div>
+          <div class="img-head">An evening nobody wants to leave.</div>
+          <div class="img-desc">A waterfront gazebo over the hot tub. Fire features along the dock. The sun dropping over the boats.</div>
+          <div class="img-desc-es">Un cenador frente al agua sobre el jacuzzi. Antorchas a lo largo del muelle. El sol cayendo sobre los barcos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Twelve-Slip Marina & The Table ───────────────── -->
+  <section class="section">
+    <div class="eyebrow">The marina · The Table</div>
+    <h2 class="title">Twelve private slips. <em>Gulf access in minutes</em>, no locks.</h2>
+
+    <p class="body-en">Twelve private marina slips arc along the waterfront in front of the pool deck, with direct Gulf access via Matlacha Pass — no locks, no bridges, no lift schedule. <strong>The Table at Lake Shadroe</strong> sits at the marina's edge: Gulf Coast seafood and seasonal Mediterranean cooking, indoor dining, an outdoor terrace, and cabana service to the pool. Boaters pull up to the dock. Residents walk down from their balconies. The marina is the front door of the resort.</p>
+
+    <p class="body-es">Doce muelles privados se extienden a lo largo del frente, con acceso directo al Golfo por Matlacha Pass — sin esclusas, sin puentes, sin horarios. <strong>The Table at Lake Shadroe</strong> está al borde de la marina: mariscos de la Costa del Golfo, cocina mediterránea de temporada, comedor interior, terraza exterior y servicio a la alberca. Los navegantes atracan en el muelle. Los residentes bajan de sus balcones. La marina es la puerta del resort.</p>
+
+    <div class="img-grid">
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-06.jpeg" alt="Raw bar — oysters on ice" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Raw bar</div>
+          <div class="img-head">Fresh daily. Opened to order.</div>
+          <div class="img-desc">Gulf Coast oysters with champagne mignonette. Local snapper and grouper crudo. Yellowfin tartare.</div>
+          <div class="img-desc-es">Ostras de la Costa del Golfo con mignonette de champaña. Crudo de pargo y mero locales. Tartar de atún.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="https://lakeshadroe.com/images/hero-the-table.png" alt="Grilled Gulf fish over saffron rice, blistered tomatoes, dill, lemon" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Main plates</div>
+          <div class="img-head">Grilled Gulf catch, simply plated.</div>
+          <div class="img-desc">Today's fillet, char-grilled, over saffron rice with blistered cherry tomatoes, fresh dill, and a lemon wedge — paired with a glass from the list.</div>
+          <div class="img-desc-es">Filete del Golfo a la parrilla, sobre arroz al azafrán con tomates cherry asados, eneldo fresco y un toque de limón — maridado con una copa de la carta.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-11.jpeg" alt="Saffron Old Fashioned cocktail" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">The tiki bar</div>
+          <div class="img-head">Faces the water.</div>
+          <div class="img-desc">Saffron Old Fashioned. Moroccan mint tea. The Passage — gin, elderflower, cucumber, mint, soda.</div>
+          <div class="img-desc-es">Old Fashioned al azafrán. Té de menta marroquí. The Passage — ginebra, sauco, pepino, menta, soda.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-14.jpeg" alt="Champagne flute at the bar" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Wine &amp; champagne</div>
+          <div class="img-head">A list designed for the table.</div>
+          <div class="img-desc">Pouilly-Fumé Dagueneau. Côtes du Rhône, Rayas. Billecart-Salmon Brut — the all-purpose opener.</div>
+          <div class="img-desc-es">Pouilly-Fumé Dagueneau. Côtes du Rhône, Rayas. Billecart-Salmon Brut — el aperitivo para cualquier ocasión.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── The Residence Club ───────────────────────────── -->
+  <section class="section">
+    <div class="eyebrow">The Residence Club</div>
+    <h2 class="title">A private club reserved for residents. <em>Two minutes from your door</em>.</h2>
+
+    <p class="body-en">A boutique fitness studio with floor-to-ceiling glass overlooking the water. A Finnish dry sauna. A cedar cold plunge barrel. The daily wellness circuit in one space, accessible 24/7 by key card, with no staff and no commute. <strong>Two minutes from your front door to the first rep of the day.</strong></p>
+
+    <p class="body-es">Un estudio boutique de fitness con vidrio de piso a techo frente al agua. Sauna seco finlandés. Barril de inmersión fría en cedro. El circuito de bienestar diario en un solo espacio, con acceso 24/7 mediante tarjeta. <strong>Dos minutos desde la puerta de su residencia hasta la primera repetición del día.</strong></p>
+
+    <div class="img-grid">
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="https://lakeshadroe.com/images/club-fitness.jpg" alt="Resort fitness studio over the water" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Fitness</div>
+          <div class="img-head">Glass to the water.</div>
+          <div class="img-desc">Floor-to-ceiling windows facing the lake. Cardio, weights, mat work.</div>
+          <div class="img-desc-es">Ventanales de piso a techo frente al lago. Cardio, pesas, trabajo en colchoneta.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="https://lakeshadroe.com/images/club-sauna.jpg" alt="Finnish sauna and cold plunge" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Sauna &amp; cold plunge</div>
+          <div class="img-head">Fifteen in, two under, thirty seconds home.</div>
+          <div class="img-desc">A four-to-six person cedar-lined Finnish dry sauna and a dedicated cold plunge vessel.</div>
+          <div class="img-desc-es">Sauna seco finlandés de cedro para cuatro a seis personas y barril dedicado de inmersión fría.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Dalal — destination spa ──────────────────────── -->
+  <section class="section dark">
+    <div class="eyebrow" style="color: var(--gold-light);">Dalal · 10,222 SF destination spa</div>
+    <h2 class="title">A spa the family already <em>recognises from Europe</em> — built into the campus.</h2>
+
+    <p class="body-en">A destination spa in its own dedicated building on the resort campus. A standalone wellness destination drawing guests from across Southwest Florida — and a two-minute walk for Lake Shadroe residents. The heart of Dalal is the hammam: arched stone chambers, brass lanterns, candlelight, heated marble platforms, black soap exfoliation, the kessa mitt. The authentic thermal sequence practiced for centuries, delivered in a purpose-built space. A full session runs sixty to ninety minutes and leaves you in a state that no massage alone can produce.</p>
+
+    <p class="body-es">Un spa de destino en edificio propio dentro del conjunto. Un destino de bienestar autónomo que recibe huéspedes de toda la región — y a dos minutos a pie para los residentes de Lake Shadroe. El corazón de Dalal es el hammam: cámaras de piedra abovedadas, faroles de latón, plataformas de mármol calefaccionadas, jabón negro, manopla kessa. La secuencia térmica auténtica, en un espacio diseñado para ella.</p>
+
+    <div class="spa-stack">
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-17.jpeg" alt="The Hammam — arched chamber" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">The Hammam</div>
+          <div class="img-head">Arched chamber. Brass lanterns. Steam.</div>
+          <div class="img-desc">The authentic thermal sequence, delivered in a purpose-built space.</div>
+          <div class="img-desc-es">La secuencia térmica auténtica en un espacio construido para ella.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-19.jpeg" alt="Relaxation lounge with mint tea" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">Relaxation lounge</div>
+          <div class="img-head">The hour afterward.</div>
+          <div class="img-desc">White linen daybeds. Brass lanterns. Fresh mint tea on a hammered brass tray.</div>
+          <div class="img-desc-es">Camastros de lino blanco. Faroles de latón. Té de menta fresco en bandeja de bronce martillado.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <div class="img-wrap">
+          <img src="/lake-shadroe/images/brochure-extracted/brochure-img-21.jpeg" alt="Longevity wellness suite" />
+        </div>
+        <div class="img-meta">
+          <div class="img-tag">The Longevity Suite</div>
+          <div class="img-head">A spa, not a clinic.</div>
+          <div class="img-desc">IV therapy, NAD+, physician-supervised wellness — delivered in the aesthetic of a spa.</div>
+          <div class="img-desc-es">Terapia IV, NAD+, bienestar bajo supervisión médica — en estética de spa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Two moats brief ──────────────────────────────── -->
+  <section class="section">
+    <div class="eyebrow">Built differently · Construido distinto</div>
+    <div class="moats-brief">
+      <div class="moat-mini">
+        <div class="moat-tag">Moat one</div>
+        <div class="moat-head">No flood insurance required.</div>
+        <div class="moat-en">We engineered the site out of the flood zone entirely. Most Florida waterfront condos carry significant mandatory flood insurance. Lake Shadroe units do not.</div>
+        <div class="moat-es">Diseñamos el terreno fuera de la zona de inundación por completo. La mayoría de los condominios costeros en Florida pagan costos significativos de seguro contra inundaciones. Las unidades de Lake Shadroe no.</div>
+      </div>
+      <div class="moat-mini">
+        <div class="moat-tag">Moat two</div>
+        <div class="moat-head">Your right to rent runs with the land.</div>
+        <div class="moat-en">Commercial condo-hotel zoning. Short-term rental is the primary intended use — not a privilege granted by an HOA. No HOA vote can touch it. Ever.</div>
+        <div class="moat-es">Zonificación comercial condo-hotel. El alquiler de corta estancia es el uso principal contemplado — no un privilegio otorgado por una asociación. Ningún voto de asociación puede tocarlo. Nunca.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Closing / contact ────────────────────────────── -->
+  <section class="section dark" style="background: var(--navy);">
+    <div class="eyebrow" style="color: var(--gold-light);">A private introduction · Una introducción privada</div>
+    <h2 class="title" style="color: var(--cream);">Ready to <em>match a residence</em> to the family?</h2>
+
+    <p class="closing-text-en" style="color: rgba(249,247,243,0.92);">
+      The next step is a conversation with Vantage Point Investments. A <strong style="color:var(--gold-light);">$25,000 refundable deposit</strong> secures a residence and Founder's pricing while the family completes selection. Floor plans, finish selections, delivery sequencing, and the Roelens rental-program documentation are released under your name.
+    </p>
+    <p class="closing-text-es" style="color: rgba(249,247,243,0.55);">
+      El siguiente paso es una conversación con Vantage Point Investments. Un depósito reembolsable de <strong style="color:var(--gold-light); font-style:normal;">USD $25,000</strong> reserva una residencia y el precio Founder's mientras la familia completa la selección. Los planos, acabados, secuencia de entrega y documentación del programa Roelens se entregan a nombre del comprador.
+    </p>
+
+    <div class="intro-cta" id="intro-cta-block">
+      <p class="intro-cta-lead-en">We would welcome a private introduction call at your convenience.</p>
+      <a class="intro-cta-btn"
+         href="tel:+12394646887">
+        Request a Private Introduction → (239) 464-6887
+      </a>
+      <div class="intro-cta-sub">Deborah Knight · Available for Zoom or in-person meetings in Cape Coral and Miami.</div>
+      <p class="intro-cta-lead-es">
+        Estaríamos encantados de coordinar una llamada privada a su conveniencia.<br/>
+        <a class="intro-cta-btn" style="margin-top:10px;" href="tel:+12394646887">
+          Solicitar una introducción privada → (239) 464-6887
+        </a>
+      </p>
+    </div>
+
+    <!-- VPI-CONTACT-BLOCK: Rob + Deborah Knight -->
+    <div class="vpi-contact-block" id="vpi-contact-block">
+      <div class="vpi-contact-row">
+        <!-- LEFT — Rob Knight (LS-069) -->
+        <div class="vpi-contact-card">
+          <img class="vpi-contact-headshot"
+               src="/lake-shadroe/images/people/rob-knight-headshot.jpg"
+               alt="Rob Knight, Founder &amp; Managing Principal, Vantage Point Investments" />
+          <div>
+            <div class="vpi-contact-name">Rob Knight</div>
+            <div class="vpi-contact-role">Founder &amp; Managing Principal, Vantage Point Investments</div>
+            <div class="vpi-contact-lines">
+              <a href="mailto:rob@vpiflorida.com">rob@vpiflorida.com</a><br/>
+              <a href="https://vpiflorida.com" target="_blank" rel="noopener">vpiflorida.com</a><br/>
+              FL Realtor SL3481954
+            </div>
+          </div>
+        </div>
+        <!-- RIGHT — Deborah Knight (LS-077) -->
+        <div class="vpi-contact-card">
+          <img class="vpi-contact-headshot"
+               src="/lake-shadroe/images/people/deborah-knight-headshot.jpg"
+               alt="Deborah Knight, Co-Founder, Vantage Point Investments" />
+          <div>
+            <div class="vpi-contact-name">Deborah Knight</div>
+            <div class="vpi-contact-role">Co-Founder &amp; Licensed Realtor</div>
+            <div class="vpi-contact-lines">
+              <a href="tel:+12394646887">(239) 464-6887 mobile</a><br/>
+              FL Realtor SL3332353
+            </div>
+            <div class="vpi-contact-note">Deborah handles all initial inquiries and client follow-up.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────── -->
+  <div class="footer">
+    <span class="strong">Private &amp; confidential</span> · Vantage Point Investments · Lake Shadroe Resort &amp; Marina · 218 Burnt Store Road South, Cape Coral, FL 33991 · <span class="strong">Not a public offering</span> · Real estate transaction · Cross-border buyers should consult their own tax counsel · Materials available in English or Spanish · <a href="https://vpiflorida.com" style="color:inherit;text-decoration:none;">vpiflorida.com</a>
+  </div>
+
+</div>
+
+<button class="print-btn" type="button" onclick="window.print()">&#x1F5A8; Print / Save as PDF</button>
+
+</body>
+</html>

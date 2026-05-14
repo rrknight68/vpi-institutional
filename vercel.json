@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/1031-exchange", "destination": "/1031-exchange.html" },
+    { "source": "/lake-shadroe/lifestyle", "destination": "/lake-shadroe/lifestyle.html" },
+    { "source": "/lake-shadroe/units", "destination": "/lake-shadroe/units.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
