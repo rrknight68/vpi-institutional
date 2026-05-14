@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/1031-exchange", "destination": "/1031-exchange.html" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
